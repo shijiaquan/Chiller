@@ -1,0 +1,519 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D25C3873-AE2E-43ED-B245-C96978CE8CF0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Chiller</RootNamespace>
+    <AssemblyName>Chiller</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>20190426040743892.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Chiller.Home</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Advantech.Adam, Version=8.2.12.0, Culture=neutral, PublicKeyToken=c24039c75946be9c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Advantech.Adam.dll</HintPath>
+    </Reference>
+    <Reference Include="Advantech.Common, Version=8.2.12.0, Culture=neutral, PublicKeyToken=c24039c75946be9c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Advantech.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Advantech.Graph, Version=8.2.12.0, Culture=neutral, PublicKeyToken=c24039c75946be9c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Advantech.Graph.dll</HintPath>
+    </Reference>
+    <Reference Include="Advantech.Protocol, Version=8.2.12.0, Culture=neutral, PublicKeyToken=c24039c75946be9c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Advantech.Protocol.dll</HintPath>
+    </Reference>
+    <Reference Include="HslControls, Version=2.2.0.0, Culture=neutral, PublicKeyToken=a3ad7c5c937ec0c0, processorArchitecture=MSIL">
+      <HintPath>..\packages\HslControls.2.2.0\lib\net45\HslControls.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NModbus4, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\NModbus4.2.1.0\lib\net40\NModbus4.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Core">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Management" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Windows.Forms.DataVisualization">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Deployment">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ZD_Control">
+      <HintPath>..\..\..\..\..\..\资料\C#类库\ZD_Control - 副本\ZD_Control\bin\Release\ZD_Control.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Adam.cs" />
+    <Compile Include="AlmDisplay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AlmDisplay.Designer.cs">
+      <DependentUpon>AlmDisplay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Auxiliary.cs" />
+    <Compile Include="ColorPicker\ColorFrom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ColorPicker\ColorPicker.designer.cs">
+      <DependentUpon>ColorFrom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ColorPicker\ColorTable.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DewPointSensor.cs" />
+    <Compile Include="Diagnosis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Diagnosis.Designer.cs">
+      <DependentUpon>Diagnosis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExternalTempDisplay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExternalTempDisplay.Designer.cs">
+      <DependentUpon>ExternalTempDisplay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExternalTempDisplay\Cold_HotPlate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExternalTempDisplay\Cold_HotPlate.Designer.cs">
+      <DependentUpon>Cold_HotPlate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExternalTempDisplay\TestArm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExternalTempDisplay\TestArm.Designer.cs">
+      <DependentUpon>TestArm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MessageDisplayHeat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MessageDisplayHeat.Designer.cs">
+      <DependentUpon>MessageDisplayHeat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExternalConnectingPlateTemp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExternalConnectingPlateTemp.Designer.cs">
+      <DependentUpon>ExternalConnectingPlateTemp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExternalTempControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExternalTempControl.Designer.cs">
+      <DependentUpon>ExternalTempControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExternalTempDataOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExternalTempDataOut.Designer.cs">
+      <DependentUpon>ExternalTempDataOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExternalTempEnable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExternalTempEnable.Designer.cs">
+      <DependentUpon>ExternalTempEnable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExternalTempVarietiesList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExternalTempVarietiesList.Designer.cs">
+      <DependentUpon>ExternalTempVarietiesList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Flag.cs" />
+    <Compile Include="Function.cs" />
+    <Compile Include="Handler.cs" />
+    <Compile Include="InternalCoolControlChart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InternalCoolControlChart.Designer.cs">
+      <DependentUpon>InternalCoolControlChart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Logon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Logon.Designer.cs">
+      <DependentUpon>Logon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MessageDisplay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MessageDisplay.Designer.cs">
+      <DependentUpon>MessageDisplay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModbusDiagnosis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModbusDiagnosis.Designer.cs">
+      <DependentUpon>ModbusDiagnosis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModbusRtuPrint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModbusRtuPrint.Designer.cs">
+      <DependentUpon>ModbusRtuPrint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PanasonicA6.cs" />
+    <Compile Include="PMA.cs" />
+    <Compile Include="Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InternalCoolControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InternalCoolControl.Designer.cs">
+      <DependentUpon>InternalCoolControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InternalCoolState.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InternalCoolState.Designer.cs">
+      <DependentUpon>InternalCoolState.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="SystemFreeTime.cs" />
+    <Compile Include="TempControl.cs" />
+    <Compile Include="TempOffTKSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TempOffTKSet.Designer.cs">
+      <DependentUpon>TempOffTKSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UnitWorkState.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UnitWorkState.Designer.cs">
+      <DependentUpon>UnitWorkState.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Win.cs" />
+    <Compile Include="ExternalTempState.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExternalTempState.Designer.cs">
+      <DependentUpon>ExternalTempState.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Work.cs" />
+    <Compile Include="ExternalTempControlChart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExternalTempControlChart.Designer.cs">
+      <DependentUpon>ExternalTempControlChart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UnitWorkStateChart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UnitWorkStateChart.Designer.cs">
+      <DependentUpon>UnitWorkStateChart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InternalTempChange.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InternalTempChange.Designer.cs">
+      <DependentUpon>InternalTempChange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExternalTempVarietiesData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExternalTempVarietiesData.Designer.cs">
+      <DependentUpon>ExternalTempVarietiesData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manufacturer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manufacturer.Designer.cs">
+      <DependentUpon>Manufacturer.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AlmDisplay.resx">
+      <DependentUpon>AlmDisplay.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ColorPicker\ColorFrom.resx">
+      <DependentUpon>ColorFrom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Diagnosis.resx">
+      <DependentUpon>Diagnosis.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExternalTempDisplay.resx">
+      <DependentUpon>ExternalTempDisplay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExternalTempDisplay\Cold_HotPlate.resx">
+      <DependentUpon>Cold_HotPlate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExternalTempDisplay\TestArm.resx">
+      <DependentUpon>TestArm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MessageDisplayHeat.resx">
+      <DependentUpon>MessageDisplayHeat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExternalConnectingPlateTemp.resx">
+      <DependentUpon>ExternalConnectingPlateTemp.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExternalTempControl.resx">
+      <DependentUpon>ExternalTempControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExternalTempDataOut.resx">
+      <DependentUpon>ExternalTempDataOut.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExternalTempEnable.resx">
+      <DependentUpon>ExternalTempEnable.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExternalTempVarietiesList.resx">
+      <DependentUpon>ExternalTempVarietiesList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InternalCoolControl.resx">
+      <DependentUpon>InternalCoolControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InternalCoolControlChart.resx">
+      <DependentUpon>InternalCoolControlChart.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InternalCoolState.resx">
+      <DependentUpon>InternalCoolState.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Logon.resx">
+      <DependentUpon>Logon.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MessageDisplay.resx">
+      <DependentUpon>MessageDisplay.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModbusDiagnosis.resx">
+      <DependentUpon>ModbusDiagnosis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModbusRtuPrint.resx">
+      <DependentUpon>ModbusRtuPrint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TempOffTKSet.resx">
+      <DependentUpon>TempOffTKSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UnitWorkState.resx">
+      <DependentUpon>UnitWorkState.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExternalTempState.resx">
+      <DependentUpon>ExternalTempState.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExternalTempControlChart.resx">
+      <DependentUpon>ExternalTempControlChart.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UnitWorkStateChart.resx">
+      <DependentUpon>UnitWorkStateChart.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InternalTempChange.resx">
+      <DependentUpon>InternalTempChange.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExternalTempVarietiesData.resx">
+      <DependentUpon>ExternalTempVarietiesData.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manufacturer.resx">
+      <DependentUpon>Manufacturer.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="ColorPicker\ClassDiagram1.cd" />
+    <None Include="packages.config" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Pic\logo.png" />
+    <None Include="Pic\JHT.ico" />
+    <Content Include="20190426040317962.ico" />
+    <Content Include="20190426040743892.ico" />
+    <Content Include="HslControls.dll" />
+    <Content Include="Pic\logout.png" />
+    <None Include="Pic\Uers_unlock_64px.png" />
+    <None Include="Pic\users_unlock_256px.png" />
+    <None Include="Pic\user_2_256px.png" />
+    <Content Include="Pic\easyicon.ico" />
+    <Content Include="Pic\制造厂商.png" />
+    <Content Include="Pic\压力.png" />
+    <Content Include="Pic\压缩机.png" />
+    <Content Include="Pic\叉叉.png" />
+    <Content Include="Pic\启动.png" />
+    <Content Include="Pic\圆环.png" />
+    <Content Include="Pic\圈圈.png" />
+    <Content Include="Pic\复位.png" />
+    <Content Include="Pic\大液位环.png" />
+    <Content Include="Pic\大温度环.png" />
+    <Content Include="Pic\并通.png" />
+    <Content Include="Pic\数据 曲线 走势 趋势 图表 上升 线性.png" />
+    <Content Include="Pic\旁通.png" />
+    <Content Include="Pic\水口电磁阀.png" />
+    <Content Include="Pic\水泵.png" />
+    <Content Include="Pic\液位环.png" />
+    <Content Include="Pic\温度.png" />
+    <Content Include="Pic\温度偏移.png" />
+    <Content Include="Pic\温度环.png" />
+    <Content Include="Pic\用户.png" />
+    <Content Include="Pic\系统设置.png" />
+    <Content Include="Pic\自动控制.png" />
+    <Content Include="Pic\记录.png" />
+    <Content Include="Pic\诊断.png" />
+    <Content Include="Pic\诊断箱.png" />
+    <Content Include="Pic\退出.png" />
+    <Content Include="Pic\选择.png" />
+    <Content Include="Pic\通道.png" />
+    <Content Include="Pic\问号.ico" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

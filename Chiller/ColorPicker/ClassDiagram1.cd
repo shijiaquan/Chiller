@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ColorPicker.ColorItem">
+    <Position X="2.25" Y="0.5" Width="1.75" />
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAAAAAAAAAAQAAAAEAACAAAAAAAAAAAA=</HashCode>
+      <FileName>ColorPicker\ColorTable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ColorPicker.ColorPicker">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <Members>
+      <Field Name="colorTable" Hidden="true" />
+      <Field Name="components" Hidden="true" />
+      <Field Name="hoverBKColor" Hidden="true" />
+      <Field Name="instance" Hidden="true" />
+      <Field Name="selectedColor" Hidden="true" />
+      <Field Name="showTip" Hidden="true" />
+      <Field Name="tip" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Properties" Collapsed="true" />
+      <Compartment Name="Events" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>ACAMIICAgCgBoAAAAFCpAABKAABAAAAAZAAACAQwBAA=</HashCode>
+      <FileName>ColorPicker\ColorPicker.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="SimSun" Size="9" />
+</ClassDiagram>
